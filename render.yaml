@@ -6,7 +6,6 @@ services:
   rootDir: agent
 
   name: agent-test
-  runtime: image
   image: docker.io/mohamedwithesmileyface/realtime-agent
   # Free plan is not available for private services
   plan: starter
