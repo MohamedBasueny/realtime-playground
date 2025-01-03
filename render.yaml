@@ -6,7 +6,7 @@ services:
   rootDir: agent
 
   name: agent-test
-  runtime: image
+  runtime: container
 
   # Free plan is not available for private services
   plan: starter
