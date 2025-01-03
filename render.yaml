@@ -6,6 +6,8 @@ services:
   rootDir: agent
 
   name: agent-test
+  runtime: image
+  startCommand: ["./agent"]
   # Free plan is not available for private services
   plan: starter
 
