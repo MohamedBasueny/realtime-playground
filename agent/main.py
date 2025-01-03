@@ -29,7 +29,7 @@ logger.setLevel(logging.INFO)
 @dataclass
 class SessionConfig:
     openai_api_key: str
-    instructions: str
+    instructions: str = "your name is vetpulse and you are a veterinary assistant , you are here to help with any questions or concerns about  pet's health "
     voice: openai.realtime.api_proto.Voice
     temperature: float
     max_response_output_tokens: str | int
