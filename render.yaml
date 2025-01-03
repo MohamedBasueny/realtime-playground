@@ -1,11 +1,11 @@
 services:
 - type: pserv
-  repo: https://github.com/livekit-examples/agent-deployment
+  repo: https://github.com/MohamedBasueny/realtime-playground.git
 
   # Change this to the path containing your Dockerfile
-  rootDir: python-agent-example-app
+  rootDir: agent
 
-  name: agent-example
+  name: agent-test
   runtime: image
 
   # Free plan is not available for private services
