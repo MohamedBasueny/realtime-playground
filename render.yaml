@@ -1,29 +1,31 @@
-services:
-- type: pserv
-  repo: https://github.com/MohamedBasueny/realtime-playground.git
-
-  # Change this to the path containing your Dockerfile
-  rootDir: agent
-
-  name: agent-test
-  runtime: image
-  image: python:3.11.6-slim
-  # Free plan is not available for private services
-  plan: starter
-
-  # Environment variables are stored in a group
-  # created in the Render dashboard.
-  envVars:
-  - fromGroup: agent-example-env 
-  region: virginia
-
-  # 300s is the standard allowed maximum. Talk to render.com support if you need this increased.
-  maxShutdownDelaySeconds: 300
-
-  # Sane defaults
-  scaling:
-    minInstances: 1
-    maxInstances: 4
-    targetCPUPercent: 60
-    targetMemoryPercent: 60
 version: "1"
+services:
+  - type: service
+    name: agent-test
+    repo: https://github.com/MohamedBasueny/realtime-playground.git
+
+    # Path containing the Dockerfile
+    rootDir: agent
+
+    # Runtime: Docker-based
+    runtime: docker
+
+    # Plan for the service
+    plan: starter
+
+    # Environment variables group in Render dashboard
+    envVars:
+      - fromGroup: agent-example-env
+
+    # Region (validate the name in Render's docs)
+    region: oregon
+
+    # Maximum allowed shutdown delay
+    maxShutdownDelaySeconds: 300
+
+    # Scaling configuration
+    scaling:
+      minInstances: 1
+      maxInstances: 4
+      targetCPUPercent: 60
+      targetMemoryPercent: 60
