@@ -7,7 +7,7 @@ services:
 
   name: agent-test
   runtime: image
-
+  image: python:3.11.6-slim
   # Free plan is not available for private services
   plan: starter
 
