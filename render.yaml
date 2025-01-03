@@ -1,6 +1,5 @@
 version: "1"
 services:
-  - type: service
     name: agent-test
     repo: https://github.com/MohamedBasueny/realtime-playground.git
 
